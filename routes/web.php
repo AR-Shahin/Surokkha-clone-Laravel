@@ -5,9 +5,15 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    return view('layouts.frontend_app');
+    return view('home');
 });
 
+Route::get('/registration', function () {
+    return view('registration');
+});
+Route::get('/', function () {
+    return view('home');
+});
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
