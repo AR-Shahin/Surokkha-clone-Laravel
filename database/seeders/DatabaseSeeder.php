@@ -27,5 +27,12 @@ class DatabaseSeeder extends Seeder
         ]);
         // \App\Models\Admin::factory(10)->create();
         Product::factory(10)->create();
+
+        $this->call([
+            VaccineSeeder::class,
+            DivisionSeeder::class,
+            DistrictSeeder::class,
+            HospitalSeeder::class
+        ]);
     }
 }
