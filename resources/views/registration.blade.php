@@ -4,7 +4,18 @@
 @section('app_content')
     <section id="registraion_section">
         <div class="row container">
-            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="text-info">Important Links</h4>
+                        <ul class="mt-4">
+                            <li><a href="" class="btn btn-link">Vaccine Status</a></li>
+                            <li><a href="" class="btn btn-link">Vaccine Card</a></li>
+                            <li><a href="" class="btn btn-link">Faq</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-body">
@@ -18,22 +29,55 @@
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
-                            <div class="my-2">
-                                <label for="">Email</label>
-                                <input type="text" class="form-control" name="email" placeholder="Email"
-                                    value="{{ old('email') }}">
-                                @error('email')
-                                    <span class="text-danger">{{ $message }}</span>
-                                @enderror
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="my-2">
+                                        <label for="">Email</label>
+                                        <input type="text" class="form-control" name="email" placeholder="Email"
+                                            value="{{ old('email') }}">
+                                        @error('email')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="my-2">
+                                        <label for="">NID</label>
+                                        <input type="text" class="form-control" name="nid" placeholder="NID"
+                                            value="{{ old('nid') }}">
+                                        @error('nid')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                                </div>
                             </div>
-                            <div class="my-2">
-                                <label for="">Phone</label>
-                                <input type="text" class="form-control" name="phone" placeholder="Phone"
-                                    value="{{ old('phone') }}">
-                                @error('phone')
-                                    <span class="text-danger">{{ $message }}</span>
-                                @enderror
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="my-2">
+                                        <label for="">Phone</label>
+                                        <input type="text" class="form-control" name="phone" placeholder="Phone"
+                                            value="{{ old('phone') }}">
+                                        @error('phone')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="my-2">
+                                        <label for="">Hospital</label>
+                                        <select name="hospital" id="" class="form-control">
+                                            <option value="">Select a Hospital</option>
+                                            <option value="">H1</option>
+                                            <option value="">Pizer</option>
+                                            <option value="">Sinovac</option>
+                                        </select>
+                                        @error('hospital')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                                </div>
                             </div>
+
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="my-2">
