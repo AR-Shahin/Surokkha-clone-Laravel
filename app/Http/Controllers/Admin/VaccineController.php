@@ -42,35 +42,4 @@ class VaccineController extends Controller
     {
         return $vaccine->delete();
     }
-    public function update(Request $request, Crud $crud)
-    {
-
-        $request->validate([
-            'name' => "required|unique:cruds,name,{$crud->id}",
-        ]);
-
-        if ($request->file('image')) {
-            $request->validate([
-                'image' => ['required', 'image', 'mimes:png,jpg,jpeg']
-            ]);
-            $olgImage = $crud->image;
-            $crud =   $crud->update([
-                'name' => $request->name,
-                'slug' => $request->name,
-                'image' => File::upload($request->file('image'), 'crud')
-            ]);
-            File::deleteFile($olgImage);
-        } else {
-            $crud =   $crud->update([
-                'name' => $request->name,
-                'slug' => $request->name
-            ]);
-        }
-
-        if ($crud) {
-            return true;
-        } else {
-            return false;
-        }
-    }
 }
