@@ -1,22 +1,20 @@
 <?php
 
+use App\Http\Controllers\Frontend\{
+    HomeController
+};
 use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/', function () {
-    return view('home');
+# Home
+Route::controller(HomeController::class)->group(function () {
+    Route::get('/', 'home')->name('home');
+    Route::get('registration', 'registration')->name('registration');
+    Route::get('status', 'status')->name('status');
 });
 
-Route::get('/registration', function () {
-    return view('registration');
-});
-Route::get('/status', function () {
-    return view('status');
-});
-Route::get('/', function () {
-    return view('home');
-});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

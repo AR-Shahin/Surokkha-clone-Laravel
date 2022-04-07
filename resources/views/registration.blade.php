@@ -9,7 +9,7 @@
                     <div class="card-body">
                         <h4 class="text-info">Important Links</h4>
                         <ul class="mt-4">
-                            <li><a href="" class="btn btn-link">Vaccine Status</a></li>
+                            <li><a href="{{ route('status') }}" class="btn btn-link">Vaccine Status</a></li>
                             <li><a href="" class="btn btn-link">Vaccine Card</a></li>
                             <li><a href="" class="btn btn-link">Faq</a></li>
                         </ul>
