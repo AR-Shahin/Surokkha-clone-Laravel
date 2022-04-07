@@ -11,6 +11,9 @@ Route::get('/', function () {
 Route::get('/registration', function () {
     return view('registration');
 });
+Route::get('/status', function () {
+    return view('status');
+});
 Route::get('/', function () {
     return view('home');
 });
