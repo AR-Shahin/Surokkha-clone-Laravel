@@ -61,6 +61,11 @@ Route::prefix('admin')->as('admin.')->middleware(['auth:admin'])->group(function
 
     # hospital
     Route::prefix('hospital')->name('hospital.')->controller(HospitalController::class)->group(function () {
+        Route::get('get-all-data', 'getAllData')->name('get-all-data');
         Route::get('/', 'index')->name('index');
+        Route::post('store', 'store')->name('store');
+        Route::delete('{hospital}', 'destroy')->name('destroy');
+        Route::get('{hospital}', 'show')->name('view');
+        Route::post('{hospital}', 'update')->name('update');
     });
 });
