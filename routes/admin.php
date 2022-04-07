@@ -51,7 +51,12 @@ Route::prefix('admin')->as('admin.')->middleware(['auth:admin'])->group(function
 
     # district
     Route::prefix('district')->name('district.')->controller(DistrictController::class)->group(function () {
+        Route::get('get-all-data', 'getAllData')->name('get-all-data');
         Route::get('/', 'index')->name('index');
+        Route::post('store', 'store')->name('store');
+        Route::delete('{district}', 'destroy')->name('destroy');
+        Route::get('{district}', 'show')->name('view');
+        Route::post('{district}', 'update')->name('update');
     });
 
     # hospital
