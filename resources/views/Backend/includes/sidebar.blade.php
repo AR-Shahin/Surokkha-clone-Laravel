@@ -105,6 +105,12 @@
                         <p>Hospital</p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('admin.user.index') }}">
+                        <i class="nav-icon fa fa-user text-warning"></i>
+                        <p>Users</p>
+                    </a>
+                </li>
                 @auth('admin')
                     <li class="nav-item">
                         <form action="{{ route('admin.logout') }}" method="POST">

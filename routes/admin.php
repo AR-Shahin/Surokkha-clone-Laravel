@@ -6,7 +6,8 @@ use App\Http\Controllers\Admin\{
     CrudController,
     DistrictController,
     DivisionController,
-    HospitalController
+    HospitalController,
+    UserController
 };
 use Illuminate\Support\Facades\Route;
 
@@ -66,6 +67,14 @@ Route::prefix('admin')->as('admin.')->middleware(['auth:admin'])->group(function
         Route::post('store', 'store')->name('store');
         Route::delete('{hospital}', 'destroy')->name('destroy');
         Route::get('{hospital}', 'show')->name('view');
+        Route::post('{hospital}', 'update')->name('update');
+    });
+
+    # User
+    Route::prefix('user')->name('user.')->controller(UserController::class)->group(function () {
+        Route::get('/', 'index')->name('index');
+        Route::get('{user}', 'show')->name('view');
+        Route::delete('{hospital}', 'destroy')->name('destroy');
         Route::post('{hospital}', 'update')->name('update');
     });
 });

@@ -28,11 +28,8 @@
         </div>
     </div>
 @endsection
-@push('css')
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.1/css/jquery.dataTables.min.css">
-@endpush
+
 @push('script')
-    <script src="https://cdn.datatables.net/1.11.1/js/jquery.dataTables.min.js"></script>
     <script>
         $('#table_id').DataTable();
     </script>
