@@ -72,48 +72,60 @@
             <p>Skill</p>
           </a>
         </li> --}}
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('admin.crud.index') }}">
-                        <i class="nav-icon far fa-circle text-warning"></i>
-                        <p>Crud</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('admin.vaccine.index') }}">
-                        <i class="nav-icon far fa-circle text-warning"></i>
-                        <p>Vaccine</p>
-                    </a>
-                </li>
+                @auth('admin')
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('admin.crud.index') }}">
+                            <i class="nav-icon far fa-circle text-warning"></i>
+                            <p>Crud</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('admin.vaccine.index') }}">
+                            <i class="nav-icon far fa-circle text-warning"></i>
+                            <p>Vaccine</p>
+                        </a>
+                    </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('admin.division.index') }}">
-                        <i class="nav-icon far fa-circle text-warning"></i>
-                        <p>Division</p>
-                    </a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('admin.division.index') }}">
+                            <i class="nav-icon far fa-circle text-warning"></i>
+                            <p>Division</p>
+                        </a>
+                    </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('admin.district.index') }}">
-                        <i class="nav-icon far fa-circle text-warning"></i>
-                        <p>District</p>
-                    </a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('admin.district.index') }}">
+                            <i class="nav-icon far fa-circle text-warning"></i>
+                            <p>District</p>
+                        </a>
+                    </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('admin.hospital.index') }}">
-                        <i class="nav-icon far fa-circle text-warning"></i>
-                        <p>Hospital</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('admin.user.index') }}">
-                        <i class="nav-icon fa fa-user text-warning"></i>
-                        <p>Users</p>
-                    </a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('admin.hospital.index') }}">
+                            <i class="nav-icon far fa-circle text-warning"></i>
+                            <p>Hospital</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('admin.user.index') }}">
+                            <i class="nav-icon fa fa-user text-warning"></i>
+                            <p>Users</p>
+                        </a>
+                    </li>
+                @endauth
                 @auth('admin')
                     <li class="nav-item">
                         <form action="{{ route('admin.logout') }}" method="POST">
+                            @csrf
+                            <button class="btn btn-success btn-block">Logout</button>
+                        </form>
+                    </li>
+                @endauth
+
+
+                @auth('doctor')
+                    <li class="nav-item">
+                        <form action="{{ route('doctor.logout') }}" method="POST">
                             @csrf
                             <button class="btn btn-success btn-block">Logout</button>
                         </form>

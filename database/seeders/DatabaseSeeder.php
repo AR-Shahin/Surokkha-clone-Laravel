@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Admin;
+use App\Models\Doctor;
 use App\Models\Product;
 use Illuminate\Database\Seeder;
 
@@ -15,11 +16,19 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        Doctor::create([
+            'name' => 'Doctor',
+            'email' => 'doctor@mail.com',
+            'password' => bcrypt('password'),
+            'hospital_id' => 1
+        ]);
+
         Admin::create([
             'name' => 'Admin',
             'email' => 'admin@mail.com',
             'password' => bcrypt('password')
         ]);
+
         Admin::create([
             'name' => 'Admin 2',
             'email' => 'admin2@mail.com',
