@@ -21,15 +21,17 @@
                     <div class="card-body">
                         <h2>Registraion For Vaccine</h2>
                         <form action="" class="mt-4">
-                            <div class="my-2">
-                                <label for="">Name</label>
-                                <input type="text" class="form-control" name="name" placeholder="Name"
-                                    value="{{ old('name') }}">
-                                @error('name')
-                                    <span class="text-danger">{{ $message }}</span>
-                                @enderror
-                            </div>
                             <div class="row">
+                                <div class="col-md-6">
+                                    <div class="my-2">
+                                        <label for="">Name</label>
+                                        <input type="text" class="form-control" name="name" placeholder="Name"
+                                            value="{{ old('name') }}">
+                                        @error('name')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                                </div>
                                 <div class="col-md-6">
                                     <div class="my-2">
                                         <label for="">Email</label>
@@ -40,6 +42,9 @@
                                         @enderror
                                     </div>
                                 </div>
+                            </div>
+
+                            <div class="row">
                                 <div class="col-md-6">
                                     <div class="my-2">
                                         <label for="">NID</label>
@@ -50,8 +55,6 @@
                                         @enderror
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
                                 <div class="col-md-6">
                                     <div class="my-2">
                                         <label for="">Phone</label>
@@ -62,22 +65,7 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="my-2">
-                                        <label for="">Hospital</label>
-                                        <select name="hospital" id="" class="form-control">
-                                            <option value="">Select a Hospital</option>
-                                            <option value="">H1</option>
-                                            <option value="">Pizer</option>
-                                            <option value="">Sinovac</option>
-                                        </select>
-                                        @error('hospital')
-                                            <span class="text-danger">{{ $message }}</span>
-                                        @enderror
-                                    </div>
-                                </div>
                             </div>
-
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="my-2">
@@ -105,6 +93,46 @@
                                 </div>
                             </div>
 
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="my-2">
+                                        <label for="">Division</label>
+                                        <select name="division" id="" class="form-control division">
+                                            <option value="">Select Your Divison</option>
+                                            @foreach ($divisions as $division)
+                                                <option value="{{ $division->id }}">{{ $division->name }}</option>
+                                            @endforeach
+                                        </select>
+                                        @error('division')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="my-2">
+                                        <label for="">District</label>
+                                        <select name="district" id="" class="form-control district">
+                                            <option value="">Select Your District</option>
+
+                                        </select>
+                                        @error('district')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="my-2">
+                                        <label for="">Hospital</label>
+                                        <select name="hospital" id="" class="form-control hospital">
+                                            <option value="">Select a Hospital</option>
+                                        </select>
+                                        @error('hospital')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="my-2">
                                 <button class="btn btn-sm btn-success w-100">Apply for Vaccine</button>
                             </div>
@@ -116,3 +144,39 @@
         </div>
     </section>
 @stop
+
+@push('script')
+    <script>
+        $(document).ready(function() {
+            $('.division').select2();
+        });
+
+        $('body').on('change', '.division', function() {
+            let id = $(this).val();
+            let url = `${base_url}/division-districts/${id}`
+            axios.get(url).then(res => {
+                let html = '';
+                html += '<option value="">Select Your District</option>'
+                res.data.districts.forEach(element => {
+                    html += "<option value=" + element.id + ">" + element.name + "</option>"
+                });
+                $('.district').html(html);
+                $('.district').select2();
+            })
+        });
+
+        $('body').on('change', '.district', function() {
+            let id = $(this).val();
+            let url = `${base_url}/district-hospitals/${id}`
+            axios.get(url).then(res => {
+                let html = '';
+                html += '<option value="">Select A Hospital</option>'
+                res.data.hospitals.forEach(element => {
+                    html += "<option value=" + element.id + ">" + element.name + "</option>"
+                });
+                $('.hospital').html(html);
+                $('.hospital').select2();
+            })
+        });
+    </script>
+@endpush

@@ -14,10 +14,6 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function registration()
-    {
-        return view('registration');
-    }
 
     public function status()
     {
