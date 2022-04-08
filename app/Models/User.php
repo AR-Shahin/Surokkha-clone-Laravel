@@ -30,6 +30,14 @@ class User extends Model
         return $query->status == 'booster';
     }
 
+    public function hospital()
+    {
+        return $this->belongsTo(Hospital::class);
+    }
+    public function vaccine()
+    {
+        return $this->belongsTo(Vaccine::class);
+    }
     public function first_dose()
     {
         return $this->hasOne(FirstDose::class);

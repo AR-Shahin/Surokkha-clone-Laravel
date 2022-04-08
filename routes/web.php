@@ -4,9 +4,18 @@ use App\Http\Controllers\Frontend\{
     HomeController,
     RegistrationController
 };
+use App\Mail\TestMail;
+use App\Mail\UserRegistrationMail;
+use App\Models\User;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
+Route::get('test', function () {
 
+    Mail::to('ar@mail.com')->send(new TestMail);
+    return new TestMail;
+    return new UserRegistrationMail(User::first());
+});
 
 # Home
 Route::controller(HomeController::class)->group(function () {
