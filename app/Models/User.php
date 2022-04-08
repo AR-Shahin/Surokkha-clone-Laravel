@@ -10,6 +10,10 @@ class User extends Model
     use HasFactory;
     protected $guarded = [];
 
+    public function scopeFirstDosePending($query)
+    {
+        return $query->dose_one == 1;
+    }
     public function scopePending($query)
     {
         return $query->status == 'pending';

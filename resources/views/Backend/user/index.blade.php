@@ -38,7 +38,10 @@
                             <td>
                                 <a href="{{ route('admin.user.view', $user->id) }}" class="btn btn-sm btn-success"><i
                                         class="fa fa-eye"></i></a>
-                                <a href="" class="btn btn-sm btn-info"><i class="fa fa-envelope"></i></a>
+                                @if ($user->status == 'pending')
+                                    <a href="{{ route('admin.user.first-dose-request', $user->id) }}"
+                                        class="btn btn-sm btn-info"><i class="fa fa-envelope"></i></a>
+                                @endif
                                 <a href="" class="btn btn-sm btn-success"><i class="fa fa-eye"></i></a>
                             </td>
                         </tr>

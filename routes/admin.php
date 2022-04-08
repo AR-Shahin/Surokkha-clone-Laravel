@@ -74,6 +74,7 @@ Route::prefix('admin')->as('admin.')->middleware(['auth:admin'])->group(function
     Route::prefix('user')->name('user.')->controller(UserController::class)->group(function () {
         Route::get('/', 'index')->name('index');
         Route::get('{user}', 'show')->name('view');
+        Route::get('first-dose-request/{user}', 'sendMailForFirstDose')->name('first-dose-request');
         Route::delete('{hospital}', 'destroy')->name('destroy');
         Route::post('{hospital}', 'update')->name('update');
     });

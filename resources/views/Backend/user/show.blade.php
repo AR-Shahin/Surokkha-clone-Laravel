@@ -62,7 +62,7 @@
                     <th class="p-2">Vaccine Status</th>
                     <td class="p-2">{{ $user->status }}</td>
                 </tr>
-                @if (!$user->status == 'pending')
+                @if ($user->dose_one || $user->dose_two)
                     <tr>
                         <th class="p-2">First Dose</th>
                         {{-- <td class="p-2">{{ $user->first_dose->vaccine_id }}</td> --}}
