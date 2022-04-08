@@ -20,7 +20,8 @@
                 <div class="card">
                     <div class="card-body">
                         <h2>Registraion For Vaccine</h2>
-                        <form action="" class="mt-4">
+                        <form action="{{ route('handle.registration') }}" class="mt-4" method="POST">
+                            @csrf
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="my-2">
@@ -80,13 +81,13 @@
                                 <div class="col-md-6">
                                     <div class="my-2">
                                         <label for="">Vaccine</label>
-                                        <select name="vaccine" id="" class="form-control">
+                                        <select name="vaccine_id" id="" class="form-control">
                                             <option value="">Select a Vaccine</option>
                                             @foreach ($vaccines as $vaccine)
                                                 <option value="{{ $vaccine->id }}">{{ $vaccine->name }}</option>
                                             @endforeach
                                         </select>
-                                        @error('vaccine')
+                                        @error('vaccine_id')
                                             <span class="text-danger">{{ $message }}</span>
                                         @enderror
                                     </div>
@@ -123,10 +124,10 @@
                                 <div class="col-md-6">
                                     <div class="my-2">
                                         <label for="">Hospital</label>
-                                        <select name="hospital" id="" class="form-control hospital">
+                                        <select name="hospital_id" id="" class="form-control hospital">
                                             <option value="">Select a Hospital</option>
                                         </select>
-                                        @error('hospital')
+                                        @error('hospital_id')
                                             <span class="text-danger">{{ $message }}</span>
                                         @enderror
                                     </div>

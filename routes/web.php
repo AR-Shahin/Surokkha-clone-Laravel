@@ -16,7 +16,8 @@ Route::controller(HomeController::class)->group(function () {
 
 # Registration
 Route::controller(RegistrationController::class)->group(function () {
-    Route::get('registration', 'registration')->name('registration');
+    Route::get('registration', 'registration')->name('handle.registration');
+    Route::post('registration', 'handleRegistration')->name('registration');
     Route::get('division-districts/{division}', 'districtDivisions')->name('div.dis');
     Route::get('district-hospitals/{district}', 'districtHospitals')->name('dis.hos');
 });

@@ -9,6 +9,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
     @stack('css')
 
     <style>
@@ -125,6 +126,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script>
+        @if (Session::has('success'))
+            toastr.success("{{ Session::get('success') }}", 'Success!')
+        @elseif(Session::has('warning'))
+            toastr.warning("{{ Session::get('warning') }}", 'Warning!')
+        @elseif(Session::has('error'))
+            toastr.error("{{ Session::get('error') }}", 'Error!')
+        @endif
+    </script>
     <script>
         const $$ = (el) => document.querySelector(el);
         const log = (el = 'ok') => console.log(el);
