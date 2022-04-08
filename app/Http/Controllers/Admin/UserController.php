@@ -16,6 +16,7 @@ class UserController extends Controller
 
     public function show(User $user)
     {
-        return $user;
+        $user = $user->load('first_dose', 'second_dose', 'vaccine', 'hospital');
+        return view('Backend.user.show', compact('user'));
     }
 }
