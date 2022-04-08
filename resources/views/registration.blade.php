@@ -82,9 +82,9 @@
                                         <label for="">Vaccine</label>
                                         <select name="vaccine" id="" class="form-control">
                                             <option value="">Select a Vaccine</option>
-                                            <option value="">Mordana</option>
-                                            <option value="">Pizer</option>
-                                            <option value="">Sinovac</option>
+                                            @foreach ($vaccines as $vaccine)
+                                                <option value="{{ $vaccine->id }}">{{ $vaccine->name }}</option>
+                                            @endforeach
                                         </select>
                                         @error('vaccine')
                                             <span class="text-danger">{{ $message }}</span>
