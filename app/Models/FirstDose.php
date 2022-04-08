@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class FirstDose extends Model
 {
     use HasFactory;
+
+    protected $guarded = [];
 }
