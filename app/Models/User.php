@@ -12,7 +12,7 @@ class User extends Model
 
     public function scopeFirstDosePending($query)
     {
-        return $query->dose_one == 1;
+        return $query->dose_one;
     }
     public function scopePending($query)
     {

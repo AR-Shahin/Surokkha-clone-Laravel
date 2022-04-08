@@ -31,4 +31,10 @@ class UserController extends Controller
         session()->flash('success', 'Mail Sent Successfully!');
         return back();
     }
+
+    public function firstDoseUsers()
+    {
+        $users = User::where('dose_one', '=', 1)->whereStatus('pending')->latest()->get();
+        return view('Backend.user.first-dose', compact('users'));
+    }
 }

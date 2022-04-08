@@ -6,7 +6,7 @@
             <div class="d-flex justify-content-between">
                 <h3 class="card-title">Manage Users</h3>
                 <div class="btn-group">
-                    <a href="{{ route('admin.user.first-dose-users') }}" class="btn btn-sm btn-success">First Dose</a>
+                    <a href="{{ route('admin.user.index') }}" class="btn btn-sm btn-success">Back</a>
                     <a href="" class="btn btn-sm btn-info">Second Dose</a>
                     <a href="" class="btn btn-sm btn-secondary">Booster Dose</a>
                 </div>
@@ -38,10 +38,6 @@
                             <td>
                                 <a href="{{ route('admin.user.view', $user->id) }}" class="btn btn-sm btn-success"><i
                                         class="fa fa-eye"></i></a>
-                                @if ($user->status == 'pending')
-                                    <a href="{{ route('admin.user.first-dose-request', $user->id) }}"
-                                        class="btn btn-sm btn-info"><i class="fa fa-envelope"></i></a>
-                                @endif
                                 <a href="" class="btn btn-sm btn-success"><i class="fa fa-eye"></i></a>
                             </td>
                         </tr>
