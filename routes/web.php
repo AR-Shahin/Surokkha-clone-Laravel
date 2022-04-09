@@ -2,7 +2,8 @@
 
 use App\Http\Controllers\Frontend\{
     HomeController,
-    RegistrationController
+    RegistrationController,
+    TikaCardController
 };
 use App\Mail\FirstDoseMail;
 use App\Mail\TestMail;
@@ -31,6 +32,15 @@ Route::controller(RegistrationController::class)->group(function () {
     Route::get('division-districts/{division}', 'districtDivisions')->name('div.dis');
     Route::get('district-hospitals/{district}', 'districtHospitals')->name('dis.hos');
 });
+
+# Tika Card
+
+Route::controller(TikaCardController::class)->prefix('tika-card')->name('tika.')->group(function () {
+
+    Route::get('/', 'index')->name('card');
+    Route::post('/download', 'downloadVaccineCard')->name('download');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

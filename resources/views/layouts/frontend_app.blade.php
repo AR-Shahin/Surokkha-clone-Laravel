@@ -70,7 +70,8 @@
                                         href="{{ route('registration') }}">নিবন্ধন</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">টিকা কার্ড</a>
+                                    <a class="nav-link active" aria-current="page"
+                                        href="{{ route('tika.card') }}">টিকা কার্ড</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link active" aria-current="page" href="#">টিকা সনদ</a>
