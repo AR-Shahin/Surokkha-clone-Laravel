@@ -8,6 +8,17 @@ use App\Http\Controllers\Controller;
 
 class UserController extends Controller
 {
+    public function allUsers()
+    {
+        $users = User::DoctorUsers()->latest()->get();
+        return view('doctor.user.index', compact('users'));
+    }
+    public function show(User $user)
+    {
+        $user = $user->load('first_dose', 'second_dose', 'vaccine', 'hospital');
+        return view('doctor.user.show', compact('user'));
+    }
+
     public function firstDose()
     {
         $users = User::doctorFirstDosePending()->get();

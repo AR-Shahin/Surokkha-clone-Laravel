@@ -32,7 +32,7 @@
                             <td>{{ $user->created_at->diffForHumans() }}</td>
                             <td>{{ $user->status }}</td>
                             <td>
-                                <a href="{{ route('admin.user.view', $user->id) }}" class="btn btn-sm btn-success"><i
+                                <a href="{{ route('doctor.user.view', $user->id) }}" class="btn btn-sm btn-success"><i
                                         class="fa fa-eye"></i></a>
                                 <form action="{{ route('doctor.user.first-dose-push', $user->id) }}" class="d-inline"
                                     method="POST">

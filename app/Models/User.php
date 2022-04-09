@@ -10,6 +10,10 @@ class User extends Model
     use HasFactory;
     protected $guarded = [];
 
+    public function scopeDoctorUsers($query)
+    {
+        return $query->where('hospital_id', auth('doctor')->user()->hospital_id);
+    }
     public function scopeDoctorFirstDosePending($query)
     {
         return $query->where('hospital_id', auth('doctor')->user()->hospital_id)->where('status', 'pending')->where('dose_one', 1);

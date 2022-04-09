@@ -25,6 +25,12 @@
 
                 @auth('doctor')
                     <li class="nav-item">
+                        <a class="nav-link" href="{{ route('doctor.user.all') }}">
+                            <i class="nav-icon fa fa-user text-warning"></i>
+                            <p>Users</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="{{ route('doctor.user.first-dose') }}">
                             <i class="nav-icon fa fa-user text-warning"></i>
                             <p>First Dose</p>

@@ -23,6 +23,10 @@ Route::prefix('doctor')->name('doctor.')->group(function () {
 
     # User
     Route::prefix('user')->name('user.')->controller(UserController::class)->group(function () {
+
+        Route::get('/', 'allUsers')->name('all');
+        Route::get('show/{user}', 'show')->name('view');
+
         Route::get('/first-dose', 'firstDose')->name('first-dose');
         Route::post('/first-dose/{user}', 'firstDosePush')->name('first-dose-push');
 
