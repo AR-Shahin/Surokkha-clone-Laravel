@@ -67,12 +67,12 @@
                         <th class="p-2">First Dose</th>
                         {{-- <td class="p-2">{{ $user->first_dose->vaccine_id }}</td> --}}
                         <td>
-                            {{ $user->vaccine_id }}
+                            {{ $user->vaccine->name }}
                         </td>
                         <th class="p-2">Date</th>
                         <td>{{ $user->first_dose->date }}</td>
                         <th class="p-2">Doctor</th>
-                        <td>Shahin</td>
+                        <td>{{ $user->first_dose->doctor->name }}</td>
                     </tr>
 
                     @if ($user->second_dose)

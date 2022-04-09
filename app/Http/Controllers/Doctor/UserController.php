@@ -20,6 +20,7 @@ class UserController extends Controller
         $user->save();
         $user->first_dose()->create([
             'vaccine_id' => $user->vaccine_id,
+            'doctor_id' => auth('doctor')->id(),
             'date' => now()
         ]);
         session()->flash('success', 'Push First Dose!');

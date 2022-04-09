@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class SecondDose extends Model
 {
     use HasFactory;
+
+    public function doctor()
+    {
+        $this->belongsTo(Doctor::class);
+    }
 }
