@@ -14,7 +14,10 @@ class User extends Model
     {
         return $query->where('hospital_id', auth('doctor')->user()->hospital_id)->where('status', 'pending')->where('dose_one', 1);
     }
-
+    public function scopeDoctorSecondDosePending($query)
+    {
+        return $query->where('hospital_id', auth('doctor')->user()->hospital_id)->where('status', 'first_dose')->where('dose_two', 1);
+    }
     public function scopeFirstDosePending($query)
     {
         return $query->dose_one;

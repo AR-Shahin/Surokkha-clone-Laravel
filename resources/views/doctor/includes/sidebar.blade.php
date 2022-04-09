@@ -31,6 +31,12 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="{{ route('doctor.user.second-dose') }}">
+                            <i class="nav-icon fa fa-user text-warning"></i>
+                            <p>Second Dose</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <form action="{{ route('doctor.logout') }}" method="POST">
                             @csrf
                             <button class="btn btn-success btn-block">Logout</button>

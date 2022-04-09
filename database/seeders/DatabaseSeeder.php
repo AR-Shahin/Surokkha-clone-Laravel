@@ -22,7 +22,12 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('password'),
             'hospital_id' => 1
         ]);
-
+        Doctor::create([
+            'name' => 'Doctor2',
+            'email' => 'doctor2@mail.com',
+            'password' => bcrypt('password'),
+            'hospital_id' => 1
+        ]);
         Admin::create([
             'name' => 'Admin',
             'email' => 'admin@mail.com',

@@ -27,4 +27,24 @@ class UserController extends Controller
 
         return back();
     }
+
+    public function secondDose()
+    {
+        $users = User::doctorSecondDosePending()->get();
+        return view('doctor.user.second-dose', compact('users'));
+    }
+
+    public function secondDosePush(User $user)
+    {
+        $user->status = 'second_dose';
+        $user->save();
+        $user->second_dose()->create([
+            'vaccine_id' => $user->vaccine_id,
+            'doctor_id' => auth('doctor')->id(),
+            'date' => now()
+        ]);
+        session()->flash('success', 'Pushed Second Dose!');
+
+        return back();
+    }
 }

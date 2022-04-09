@@ -1,4 +1,4 @@
-@extends('layouts.backend_master')
+@extends('layouts.doctor_master')
 @section('title', 'User')
 @section('master_content')
     <div class="card">

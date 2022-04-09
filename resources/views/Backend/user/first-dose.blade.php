@@ -4,10 +4,10 @@
     <div class="card">
         <div class="card-header ">
             <div class="d-flex justify-content-between">
-                <h3 class="card-title">Manage Users</h3>
+                <h3 class="card-title">Manage Users First Dose</h3>
                 <div class="btn-group">
                     <a href="{{ route('admin.user.index') }}" class="btn btn-sm btn-success">Back</a>
-                    <a href="" class="btn btn-sm btn-info">Second Dose</a>
+                    <a href="{{ route('admin.user.second-dose-users') }}" class="btn btn-sm btn-info">Second Dose</a>
                     <a href="" class="btn btn-sm btn-secondary">Booster Dose</a>
                 </div>
             </div>

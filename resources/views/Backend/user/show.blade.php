@@ -65,7 +65,6 @@
                 @if ($user->first_dose || $user->second_dose)
                     <tr>
                         <th class="p-2">First Dose</th>
-                        {{-- <td class="p-2">{{ $user->first_dose->vaccine_id }}</td> --}}
                         <td>
                             {{ $user->vaccine->name }}
                         </td>
@@ -78,14 +77,13 @@
                     @if ($user->second_dose)
                         <tr>
                             <th class="p-2">Second Dose</th>
-                            {{-- <td class="p-2">{{ $user->first_dose->vaccine_id }}</td> --}}
                             <td>
-                                Pizer
+                                {{ $user->vaccine->name }}
                             </td>
                             <th class="p-2">Date</th>
-                            <td>5555</td>
+                            <td>{{ $user->second_dose->date }}</td>
                             <th class="p-2">Doctor</th>
-                            <td>Shahin</td>
+                            <td>{{ $user->second_dose->doctor->name }}</td>
                         </tr>
                         <tr>
                             <th class="p-2">Booster Dose</th>

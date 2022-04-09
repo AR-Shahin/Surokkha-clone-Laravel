@@ -1,15 +1,11 @@
-@extends('layouts.backend_master')
+@extends('layouts.doctor_master')
 @section('title', 'User')
 @section('master_content')
     <div class="card">
         <div class="card-header ">
             <div class="d-flex justify-content-between">
-                <h3 class="card-title">Manage Users</h3>
-                <div class="btn-group">
-                    <a href="{{ route('admin.user.first-dose-users') }}" class="btn btn-sm btn-success">First Dose</a>
-                    <a href="{{ route('admin.user.second-dose-users') }}" class="btn btn-sm btn-info">Second Dose</a>
-                    <a href="" class="btn btn-sm btn-secondary">Booster Dose</a>
-                </div>
+                <h3 class="card-title">Manage Second Dose Users</h3>
+
             </div>
 
         </div>
@@ -38,14 +34,11 @@
                             <td>
                                 <a href="{{ route('admin.user.view', $user->id) }}" class="btn btn-sm btn-success"><i
                                         class="fa fa-eye"></i></a>
-                                @if ($user->status == 'pending')
-                                    <a href="{{ route('admin.user.first-dose-request', $user->id) }}"
-                                        class="btn btn-sm btn-info"><i class="fa fa-envelope"></i></a>
-                                @endif
-                                @if ($user->status == 'first_dose')
-                                    <a href="{{ route('admin.user.second-dose-request', $user->id) }}"
-                                        class="btn btn-sm btn-warning"><i class="fa fa-envelope"></i></a>
-                                @endif
+                                <form action="{{ route('doctor.user.second-dose-push', $user->id) }}"
+                                    class="d-inline" method="POST">
+                                    @csrf
+                                    <button class="btn btn-sm btn-info"><i class="fa fa-virus"></i></button>
+                                </form>
                             </td>
                         </tr>
                     @endforeach

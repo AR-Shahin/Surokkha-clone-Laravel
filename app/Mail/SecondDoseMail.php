@@ -4,11 +4,11 @@ namespace App\Mail;
 
 use App\Models\User;
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Contracts\Queue\ShouldQueue;
 
-class FirstDoseMail extends Mailable implements ShouldQueue
+class SecondDoseMail extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
 
@@ -30,6 +30,6 @@ class FirstDoseMail extends Mailable implements ShouldQueue
      */
     public function build()
     {
-        return $this->view('mail.first-dose')->subject('First Dose Vaccine Mail');
+        return $this->view('mail.second-dose')->subject('Second Dose Vaccine Mail');
     }
 }

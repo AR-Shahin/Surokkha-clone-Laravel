@@ -9,8 +9,10 @@ class SecondDose extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     public function doctor()
     {
-        $this->belongsTo(Doctor::class);
+        return  $this->belongsTo(Doctor::class);
     }
 }
