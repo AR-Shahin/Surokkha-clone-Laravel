@@ -25,6 +25,12 @@
 
                 @auth('doctor')
                     <li class="nav-item">
+                        <a class="nav-link" href="{{ route('doctor.dashboard') }}">
+                            <i class="nav-icon fa fa-home text-warning"></i>
+                            <p>Dashboard</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="{{ route('doctor.user.all') }}">
                             <i class="nav-icon fa fa-user text-warning"></i>
                             <p>Users</p>
