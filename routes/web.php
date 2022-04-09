@@ -13,7 +13,8 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 Route::get('test', function () {
-
+    $user = User::whereEmail('test@mail.com')->first();
+    return view('pdf.tika_card_pdf', compact('user'));
     // Mail::to('ar@mail.com')->send(new TestMail);
     // return new TestMail;
     return new FirstDoseMail(User::first());
@@ -35,7 +36,7 @@ Route::controller(RegistrationController::class)->group(function () {
 
 # Tika Card
 
-Route::controller(TikaCardController::class)->prefix('tika-card')->name('tika.')->group(function () {
+Route::controller(TikaCardController::class)->prefix('vaccine-card')->name('tika.')->group(function () {
 
     Route::get('/', 'index')->name('card');
     Route::post('/download', 'downloadVaccineCard')->name('download');

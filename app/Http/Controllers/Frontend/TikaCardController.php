@@ -27,7 +27,7 @@ class TikaCardController extends Controller
             'user' => User::whereEmail($request->email)->first()
         ];
 
-        $pdf = PDF::loadView('pdf.test_pdf', $data);
+        $pdf = PDF::loadView('pdf.tika_card_pdf', $data);
         $rand = rand(1, 500);
         return $pdf->download("vaccine-card-{$data['user']->name}-{$rand}.pdf");
     }
