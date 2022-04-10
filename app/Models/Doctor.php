@@ -23,6 +23,7 @@ class Doctor extends Authenticatable
         'name',
         'email',
         'password',
+        'hospital_id'
     ];
 
     /**
