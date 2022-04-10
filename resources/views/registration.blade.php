@@ -133,9 +133,9 @@
                                     </div>
                                 </div>
                             </div>
-
+                            <x-utility.captca-html />
                             <div class="my-2">
-                                <button class="btn btn-sm btn-success w-100">Apply for Vaccine</button>
+                                <button class="btn btn-sm btn-success w-100 disabled verify_btn">Apply for Vaccine</button>
                             </div>
 
                         </form>
@@ -147,6 +147,7 @@
 @stop
 
 @push('script')
+    <x-utility.captca-js />
     <script>
         $(document).ready(function() {
             $('.division').select2();
