@@ -7,7 +7,7 @@
                         <p class="captca text-center text-success"
                             style="font-weight:bold;font-family:'Courier New', Courier, monospace"></p>
                     </em>
-                    <p class="text-center">উপরের লিখাটি সঠিকভাবে নিচে লিখুন</p>
+                    <p class="text-center" style="color: #c0392b"><b>উপরের লিখাটি সঠিকভাবে নিচে লিখুন</b></p>
                     <input type="text" class="form-control captca_input" placeholder="উপরের লিখাটি সঠিকভাবে নিচে লিখুন">
                 </div>
             </div>
