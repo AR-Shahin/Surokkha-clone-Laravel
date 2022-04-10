@@ -10,7 +10,7 @@
                         <h4 class="text-info">Important Links</h4>
                         <ul class="mt-4">
                             <li><a href="{{ route('registration') }}" class="btn btn-link">Apply for Vaccine</a></li>
-                            <li><a href="" class="btn btn-link">Vaccine Card</a></li>
+                            <li><a href="{{ route('tika.card') }}" class="btn btn-link">Vaccine Card</a></li>
                             <li><a href="" class="btn btn-link">Faq</a></li>
                         </ul>
                     </div>
@@ -20,7 +20,8 @@
                 <div class="card">
                     <div class="card-body">
                         <h2>Check Vaccine Status</h2>
-                        <form action="" class="mt-4">
+                        <form action="{{ route('status.check') }}" class="mt-4" method="POST">
+                            @csrf
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="my-2">
@@ -46,9 +47,15 @@
 
                             <div class="my-2">
                                 <button class="btn btn-sm btn-success w-100">Check Status</button>
+                                @if (session('status'))
+                                    <a href="{{ route('status') }}" class="btn btn-sm btn-info mt-2 w-100">Clear</a>
+                                @endif
                             </div>
 
                         </form>
+                        @if (session('status'))
+                            <span class="font-bold">{{ session('status') }}</span>
+                        @endif
                     </div>
                 </div>
             </div>

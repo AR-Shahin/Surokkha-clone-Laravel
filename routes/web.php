@@ -5,7 +5,8 @@ use App\Http\Controllers\Frontend\{
     HomeController,
     RegistrationController,
     TikaCardController,
-    VaccineCertificate as FrontendVaccineCertificate
+    VaccineCertificate as FrontendVaccineCertificate,
+    VaccineStatusController
 };
 use App\Http\Controllers\VaccineCertificate;
 use App\Mail\FirstDoseMail;
@@ -54,10 +55,11 @@ Route::controller(FrontendVaccineCertificate::class)->prefix('vaccine-certificat
 });
 
 
+# Vaccine Status
+Route::controller(VaccineStatusController::class)->prefix('vaccine-status')->name('status.')->group(function () {
 
-
-
-
+    Route::post('/check', 'checkVaccineStatus')->name('check');
+});
 
 
 
