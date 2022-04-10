@@ -74,6 +74,13 @@
                             <p>Users</p>
                         </a>
                     </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('admin.doctor.index') }}">
+                            <i class="nav-icon fa fa-user text-warning"></i>
+                            <p>Doctors</p>
+                        </a>
+                    </li>
                 @endauth
                 @auth('admin')
                     <li class="nav-item">

@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\{
     CrudController,
     DistrictController,
     DivisionController,
+    DoctorController,
     HospitalController,
     UserController
 };
@@ -82,5 +83,17 @@ Route::prefix('admin')->as('admin.')->middleware(['auth:admin'])->group(function
 
         Route::delete('{hospital}', 'destroy')->name('destroy');
         Route::post('{hospital}', 'update')->name('update');
+    });
+
+
+    # Doctor
+
+    Route::prefix('doctor')->name('doctor.')->controller(DoctorController::class)->group(function () {
+        Route::get('get-all-data', 'getAllData')->name('get-all-data');
+        Route::get('/', 'index')->name('index');
+        Route::post('store', 'store')->name('store');
+        Route::delete('{doctor}', 'destroy')->name('destroy');
+        Route::get('{doctor}', 'show')->name('view');
+        Route::post('{doctor}', 'update')->name('update');
     });
 });

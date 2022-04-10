@@ -53,4 +53,9 @@ class Doctor extends Authenticatable
     {
         $this->notify(new AdminResetPasswordNotification($token));
     }
+
+    public function hospital()
+    {
+        return $this->belongsTo(Hospital::class);
+    }
 }
