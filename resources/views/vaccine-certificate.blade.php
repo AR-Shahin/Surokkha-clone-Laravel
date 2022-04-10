@@ -44,15 +44,21 @@
                                     </div>
                                 </div>
                             </div>
-
+                            <x-utility.captca-html />
                             <div class="my-2">
-                                <button class="btn btn-sm btn-success w-100">Download Certificate</button>
+                                <button class="btn btn-sm btn-success w-100 disabled verify_btn">Download
+                                    Certificate</button>
                             </div>
 
                         </form>
+
                     </div>
                 </div>
             </div>
         </div>
     </section>
 @stop
+
+@push('script')
+    <x-utility.captca-js />
+@endpush
