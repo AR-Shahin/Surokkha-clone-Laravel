@@ -96,7 +96,7 @@
                 <tr>
                     <th class="p-2">First Dose</th>
                     <td>
-                        {{ $user->vaccine->name ?? 'Not Yet' }}
+                        {{ $user->first_dose->vaccine->name ?? 'Not Yet' }}
                     </td>
                     <th class="p-2">Date</th>
                     <td>{{ $user->first_dose->date ?? 'Not Yet' }}</td>
@@ -107,16 +107,16 @@
                 <tr>
                     <th class="p-2">Second Dose</th>
                     <td>
-                        {{ $user->vaccine->name ?? 'Not Yet' }}
+                        {{ $user->second_dose->vaccine->name ?? 'Not Yet' }}
                     </td>
                     <th class="p-2">Date</th>
                     <td>{{ $user->second_dose->date ?? 'Not Yet' }}</td>
                     <th class="p-2">Doctor</th>
                     <td>{{ $user->second_dose->doctor->name ?? 'Not Yet' }}</td>
                 </tr>
-                <tr>
+                {{-- <tr>
                     <th class="p-2">Booster Dose</th>
-                    {{-- <td class="p-2">{{ $user->first_dose->vaccine_id }}</td> --}}
+
                     <td>
                         Pizer
                     </td>
@@ -124,7 +124,7 @@
                     <td>5555</td>
                     <th class="p-2">Doctor</th>
                     <td>Shahin</td>
-                </tr>
+                </tr> --}}
             </table>
         </div>
     </div>

@@ -1,10 +1,13 @@
 <?php
 
+
 use App\Http\Controllers\Frontend\{
     HomeController,
     RegistrationController,
-    TikaCardController
+    TikaCardController,
+    VaccineCertificate as FrontendVaccineCertificate
 };
+use App\Http\Controllers\VaccineCertificate;
 use App\Mail\FirstDoseMail;
 use App\Mail\TestMail;
 use App\Mail\UserRegistrationMail;
@@ -41,6 +44,23 @@ Route::controller(TikaCardController::class)->prefix('vaccine-card')->name('tika
     Route::get('/', 'index')->name('card');
     Route::post('/download', 'downloadVaccineCard')->name('download');
 });
+
+
+# Vaccine Certificate
+Route::controller(FrontendVaccineCertificate::class)->prefix('vaccine-certificate')->name('certificate.')->group(function () {
+
+    Route::get('/', 'index')->name('card');
+    Route::post('/download', 'downloadVaccineCertificate')->name('download');
+});
+
+
+
+
+
+
+
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

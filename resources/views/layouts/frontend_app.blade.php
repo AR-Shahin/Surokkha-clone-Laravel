@@ -74,7 +74,8 @@
                                         href="{{ route('tika.card') }}">টিকা কার্ড</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">টিকা সনদ</a>
+                                    <a class="nav-link active" aria-current="page"
+                                        href="{{ route('certificate.card') }}">টিকা সনদ</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link active" aria-current="page" href="{{ route('status') }}">টিকা
