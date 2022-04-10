@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class VaccineCertificate extends Controller
 {
@@ -25,6 +26,14 @@ class VaccineCertificate extends Controller
             'user' => User::whereEmail($request->email)->first()
         ];
 
-        return $data;
+        // return $data['user']->status;
+        if ($data['user']->status == 'second_dose') {
+            $pdf = PDF::loadView('pdf.vaccine_certificate_pdf', $data);
+            $rand = rand(1, 500);
+            return $pdf->download("vaccine-certificate-{$data['user']->name}-{$rand}.pdf");
+        } else {
+            session()->flash('error', "You're not able to download Vaccine Certificate!");
+            return back()->withInput(['email' => $request->email, 'nid' => $request->nid]);
+        }
     }
 }

@@ -15,4 +15,8 @@ class FirstDose extends Model
     {
         return  $this->belongsTo(Doctor::class);
     }
+    public function vaccine()
+    {
+        return  $this->belongsTo(Vaccine::class);
+    }
 }
