@@ -3,7 +3,7 @@
 @section('title', 'Registration')
 @section('app_content')
     <section id="registraion_section">
-        <div class="row container" style="height: 50vh;">
+        <div class="row container" style="height: 55vh;">
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-body">
@@ -44,9 +44,9 @@
                                     </div>
                                 </div>
                             </div>
-
+                            <x-utility.captca-html />
                             <div class="my-2">
-                                <button class="btn btn-sm btn-success w-100">Check Status</button>
+                                <button class="btn btn-sm btn-success w-100 disabled verify_btn">Check Status</button>
                                 @if (session('status'))
                                     <a href="{{ route('status') }}" class="btn btn-sm btn-info mt-2 w-100">Clear</a>
                                 @endif
@@ -62,3 +62,7 @@
         </div>
     </section>
 @stop
+
+@push('script')
+    <x-utility.captca-js />
+@endpush
