@@ -94,7 +94,7 @@ Route::prefix('admin')->as('admin.')->middleware(['auth:admin'])->group(function
         Route::get('/create', 'create')->name('create');
         Route::post('store', 'store')->name('store');
         Route::delete('{doctor}', 'destroy')->name('destroy');
-        Route::get('{doctor}', 'show')->name('view');
+        Route::get('view/{doctor}', 'show')->name('view');
         Route::post('{doctor}', 'update')->name('update');
     });
 });

@@ -42,4 +42,10 @@ class DoctorController extends Controller
         session()->flash('success', 'Doctor Created Successfully!');
         return redirect()->route('admin.doctor.index');
     }
+
+    public function show(Doctor $doctor)
+    {
+        $doctor = $doctor->load('hospital.district.division');
+        return view('Backend.doctor.view', compact('doctor'));
+    }
 }
