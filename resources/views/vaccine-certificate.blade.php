@@ -10,7 +10,7 @@
                         <h4 class="text-info">Important Links</h4>
                         <ul class="mt-4">
                             <li><a href="{{ route('registration') }}" class="btn btn-link">Apply for Vaccine</a></li>
-                            <li><a href="" class="btn btn-link">Vaccine Card</a></li>
+                            <li><a href="{{ route('tika.card') }}" class="btn btn-link">Vaccine Card</a></li>
                             <li><a href="" class="btn btn-link">Faq</a></li>
                         </ul>
                     </div>
