@@ -74,6 +74,12 @@
         </li> --}}
                 @auth('admin')
                     <li class="nav-item">
+                        <a class="nav-link" href="{{ route('admin.dashboard') }}">
+                            <i class="nav-icon fa fa-home text-warning"></i>
+                            <p>Dashboard</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="{{ route('admin.crud.index') }}">
                             <i class="nav-icon far fa-circle text-warning"></i>
                             <p>Crud</p>
