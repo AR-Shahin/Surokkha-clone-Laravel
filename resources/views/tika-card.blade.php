@@ -44,9 +44,9 @@
                                     </div>
                                 </div>
                             </div>
-
+                            <x-utility.captca-html />
                             <div class="my-2">
-                                <button class="btn btn-sm btn-success w-100">Download</button>
+                                <button class="btn btn-sm btn-success w-100 disabled verify_btn">Download</button>
                             </div>
 
                         </form>
@@ -56,3 +56,7 @@
         </div>
     </section>
 @stop
+
+@push('script')
+    <x-utility.captca-js />
+@endpush
