@@ -3,7 +3,7 @@
 @section('title', 'Registration')
 @section('app_content')
     <section id="registraion_section">
-        <div class="row container">
+        <div class="row container" style="height: 50vh;">
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-body">
