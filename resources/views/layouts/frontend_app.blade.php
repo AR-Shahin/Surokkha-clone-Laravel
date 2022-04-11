@@ -96,7 +96,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3 mb-2 align-self-center">
-                    <img src="{{ asset('img/logo-f.5c608b98.png') }}" alt="">
+                    {{-- <img src="{{ asset('img/logo-f.5c608b98.png') }}" alt=""> --}}
+                    <h5>Vaccine</h5>
                 </div>
                 <div class="col-md-3 mb-2">
                     <ul>
