@@ -181,7 +181,7 @@
             </tr>
             <tr>
                 <th>Division</th>
-                <td>${item.division.name}</td>
+                <td>${district.division.name}</td>
             </tr>
         </table>
         `)
