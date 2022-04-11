@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
+use App\Models\Division;
 use App\Models\Hospital;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class HospitalController extends Controller
 {
@@ -20,15 +21,22 @@ class HospitalController extends Controller
     }
     function store(Request $request)
     {
+
         $crud =  Hospital::create([
             'name' => $request->name,
-            'division_id' => $request->division_id
+            'district_id' => $request->district_id
         ]);
         if ($crud) {
-            return true;
+            session()->flash('success', 'Hospital Created Successfully!');
+            return redirect()->route('admin.hospital.index');
         }
     }
+    public function create()
+    {
+        $divisions = Division::latest()->get();
 
+        return view('Backend.hospital.create', compact('divisions'));
+    }
     public function show(Hospital $hospital)
     {
         return $hospital;

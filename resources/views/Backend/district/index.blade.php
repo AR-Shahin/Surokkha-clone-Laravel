@@ -99,7 +99,7 @@
                 })
         }
         getAllData();
-
+        // <a href="" class="btn btn-sm btn-info" data-id="${item.id}" data-toggle="modal" data-target="#editModal" id="editRow"><i class="fa fa-edit"></i></a>
         function table_data_row(items) {
             let loop = items.map((item, index) => {
                 return `
@@ -109,7 +109,7 @@
                 <td>${item.division.name}</td>
                 <td class="text-center">
                     <a href="" class="btn btn-sm btn-success" data-id="${item.id}" data-toggle="modal" data-target="#viewModal" id="viewRow"><i class="fa fa-eye"></i></a>
-                    <a href="" class="btn btn-sm btn-info" data-id="${item.id}" data-toggle="modal" data-target="#editModal" id="editRow"><i class="fa fa-edit"></i></a>
+
                     <a href="" id="deleteRow" class="btn btn-sm btn-danger" data-id="${item.id}"><i class="fa fa-trash-alt"></i></a>
                 </td>
             </tr>

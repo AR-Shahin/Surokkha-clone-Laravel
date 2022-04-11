@@ -65,6 +65,7 @@ Route::prefix('admin')->as('admin.')->middleware(['auth:admin'])->group(function
     Route::prefix('hospital')->name('hospital.')->controller(HospitalController::class)->group(function () {
         Route::get('get-all-data', 'getAllData')->name('get-all-data');
         Route::get('/', 'index')->name('index');
+        Route::get('/create', 'create')->name('create');
         Route::post('store', 'store')->name('store');
         Route::delete('{hospital}', 'destroy')->name('destroy');
         Route::get('{hospital}', 'show')->name('view');
@@ -87,7 +88,6 @@ Route::prefix('admin')->as('admin.')->middleware(['auth:admin'])->group(function
 
 
     # Doctor
-
     Route::prefix('doctor')->name('doctor.')->controller(DoctorController::class)->group(function () {
         Route::get('get-all-data', 'getAllData')->name('get-all-data');
         Route::get('/', 'index')->name('index');

@@ -4,7 +4,12 @@
     <div class="container">
         <div class="card">
             <div class="card-body">
-                <h3 class="text-info my-2">Manage Hospitals</h3>
+                <div class="d-flex justify-content-between">
+                    <h3 class="text-info my-2">Manage Hospitals</h3>
+                    <div>
+                        <a href="{{ route('admin.hospital.create') }}" class="btn btn-sm btn-success">Add Hospital</a>
+                    </div>
+                </div>
                 <hr>
                 <table id="table_id" class="display">
                     <thead>

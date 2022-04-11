@@ -168,7 +168,7 @@
                 <td>${vaccine.name}</td>
             </tr>
             <tr>
-                <th>Name</th>
+                <th>Available</th>
                 <td>${vaccine.available}</td>
             </tr>
         </table>
