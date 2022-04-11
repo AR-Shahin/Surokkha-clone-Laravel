@@ -1,5 +1,5 @@
 @extends('layouts.backend_master')
-@section('title', 'Category')
+@section('title', 'Hospital')
 @section('master_content')
     <div class="container">
         <div class="card">
@@ -17,6 +17,7 @@
                             <th>Name</th>
                             <th>District</th>
                             <th>Division</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -25,6 +26,13 @@
                                 <td>{{ $hospital->name }}</td>
                                 <td>{{ $hospital->district->name }}</td>
                                 <td>{{ $hospital->district->division->name }}</td>
+                                <td>
+                                    <form action="{{ route('admin.hospital.destroy', $hospital->id) }}" method="POST">
+                                        @csrf
+
+                                        <button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
+                                    </form>
+                                </td>
                             </tr>
                         @endforeach
                     </tbody>

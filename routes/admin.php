@@ -67,7 +67,7 @@ Route::prefix('admin')->as('admin.')->middleware(['auth:admin'])->group(function
         Route::get('/', 'index')->name('index');
         Route::get('/create', 'create')->name('create');
         Route::post('store', 'store')->name('store');
-        Route::delete('{hospital}', 'destroy')->name('destroy');
+        Route::post('delete/{hospital}', 'destroy')->name('destroy');
         Route::get('{hospital}', 'show')->name('view');
         Route::post('{hospital}', 'update')->name('update');
     });

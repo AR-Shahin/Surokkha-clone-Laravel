@@ -21,6 +21,10 @@ class HospitalController extends Controller
     }
     function store(Request $request)
     {
+        $request->validate([
+            'name' => ['required'],
+            'district_id' => ['required'],
+        ]);
 
         $crud =  Hospital::create([
             'name' => $request->name,
@@ -49,6 +53,10 @@ class HospitalController extends Controller
 
     public function destroy(Hospital $hospital)
     {
-        return $hospital->delete();
+        session()->flash('success', 'Hospital Deleted Successfully!');
+
+        $hospital->delete();
+
+        return back();
     }
 }
