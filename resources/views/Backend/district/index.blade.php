@@ -29,6 +29,15 @@
                 <div class="card-body">
                     <form id="addDistrictForm">
                         <div class="form-group">
+                            <label for="">Divison</label>
+                            <select name="" id="division_id" class="form-control">
+                                <option value="">Select A Divison</option>
+                                @foreach ($divisions as $division)
+                                    <option value="{{ $division->id }}">{{ $division->name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="form-group">
                             <label for="">Name</label>
                             <input type="text" class="form-control" id="name" placeholder="Enter District Name">
                             <span class="text-danger" id="nameError"></span>
@@ -117,6 +126,7 @@
             e.preventDefault();
             let name = $('#name');
             let nameError = $('#nameError');
+            let division_id = $('#division_id').val();
 
             nameError.text('');
             if (name.val() === '') {
@@ -126,12 +136,14 @@
 
 
             axios.post("{{ route('admin.district.store') }}", {
-                    name: name.val()
+                    name: name.val(),
+                    division_id
                 })
                 .then((res) => {
                     getAllData();
                     setSuccessMessage();
                     name.val('');
+                    $('#division_id').val(null);
                 })
                 .catch((err) => {
                     if (err.response.data.errors.name) {
