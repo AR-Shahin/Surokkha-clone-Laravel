@@ -48,4 +48,13 @@ class DoctorController extends Controller
         $doctor = $doctor->load('hospital.district.division');
         return view('Backend.doctor.view', compact('doctor'));
     }
+
+    public function destroy(Doctor $doctor)
+    {
+        session()->flash('success', 'Doctor Deleted Successfully!');
+
+        $doctor->delete();
+
+        return back();
+    }
 }

@@ -93,7 +93,7 @@ Route::prefix('admin')->as('admin.')->middleware(['auth:admin'])->group(function
         Route::get('/', 'index')->name('index');
         Route::get('/create', 'create')->name('create');
         Route::post('store', 'store')->name('store');
-        Route::delete('{doctor}', 'destroy')->name('destroy');
+        Route::post('delete/{doctor}', 'destroy')->name('destroy');
         Route::get('view/{doctor}', 'show')->name('view');
         Route::post('{doctor}', 'update')->name('update');
     });

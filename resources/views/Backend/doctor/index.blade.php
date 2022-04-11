@@ -34,6 +34,12 @@
                                 <td>
                                     <a href="{{ route('admin.doctor.view', $doctor->id) }}"
                                         class="btn btn-sm btn-success"><i class="fa fa-eye"></i></a>
+                                    <form class="d-inline" action="{{ route('admin.doctor.destroy', $doctor->id) }}"
+                                        method="POST">
+                                        @csrf
+
+                                        <button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
+                                    </form>
                                 </td>
                             </tr>
                         @endforeach
