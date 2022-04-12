@@ -16,6 +16,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
+Route::view('shahin', 'shahin');
 Route::get('test', function () {
     $user = User::whereEmail('test@mail.com')->first();
     return view('pdf.tika_card_pdf', compact('user'));
