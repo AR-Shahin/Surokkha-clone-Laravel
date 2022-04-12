@@ -39,7 +39,21 @@
         }
 
         .hero_card {
-            padding: 150px 0;
+            padding: 110px 0;
+        }
+
+        .usr_icon {
+            font-size: 36px
+        }
+
+        nav a {
+            font-size: 18px;
+            font-weight: 500
+        }
+
+        .items i {
+            font-size: 22px;
+            color: #F26D3E;
         }
 
     </style>
@@ -103,15 +117,17 @@
                                         <div class="top_part">
                                             <div class="d-flex">
                                                 <div class="" style="margin-right: 50px">
-                                                    <i class="fa fa-users"></i>
+                                                    <i class="fa fa-users usr_icon"></i>
                                                 </div>
-                                                <div><strong>ভ্যাকসিনের জন্য নিবন্ধন করুন</strong></div>
+                                                <div class="align-self-center"><strong
+                                                        style="font-size: 34px">ভ্যাকসিনের জন্য নিবন্ধন
+                                                        করুন</strong></div>
                                             </div>
                                         </div>
-                                        <div class="bottom_part text-center" style="margin-top: 125px">
+                                        <div class="bottom_part text-center" style="margin-top: 50px">
                                             <h5>নিবন্ধনের সময় প্রয়োজন হবে</h5>
                                             <div class="items mt-3">
-                                                <div class="d-flex">
+                                                <div class="d-flex justify-content-between">
                                                     <div class="mx-3">
                                                         <h5><i class="fa fa-contact-card"></i></h5>
                                                         <h6>NID</h6>
@@ -168,8 +184,9 @@
                                     <div class="card-body">
                                         <div>
                                             <h4> <span><i
-                                                        class="fa-solid fa-circle-info mr-5 d-inline-block"></i></span>সচরাচর
-                                                জিজ্ঞাসা
+                                                        class="fa-solid fa-circle-info mr-5 d-inline-block"></i></span><span
+                                                    class="ml-3"> সচরাচর
+                                                    জিজ্ঞাসা</span>
                                             </h4>
                                         </div>
                                     </div>
