@@ -23,6 +23,11 @@
             list-style: none;
         }
 
+        a {
+            text-decoration: none;
+            color: #F26D3E
+        }
+
         section,
         footer {
             padding: 45px 0;
@@ -156,7 +161,8 @@
                                     <div class="card-body">
                                         <div>
                                             <h4><i class="fa-solid fa-circle-info mr-5 d-inline-block"></i>
-                                                <div class="ml-3 d-inline">নিবন্ধন স্ট্যাটাস</div>
+                                                <div class="ml-5 d-inline">নিবন্ধন <span><a
+                                                            href="{{ route('status') }}">স্ট্যাটাস</a></span></div>
                                             </h4>
                                         </div>
                                     </div>
