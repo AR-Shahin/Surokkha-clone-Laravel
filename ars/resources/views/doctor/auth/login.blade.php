@@ -7,7 +7,9 @@
         <div class="login-box">
             <!-- /.login-logo -->
             <div class="card">
-                <div class="card-body login-card-body">
+                <div class="card-body login-card-body text-center">
+                    <img src="{{ asset('img/logo-f.5c608b98.png') }}" alt="" class="">
+                    <hr>
                     <h3 class="login-box-msg">Doctor Login</h3>
 
                     <form action="{{ route('doctor.auth') }}" method="post">
