@@ -71,7 +71,9 @@
             <div class="container">
                 <div class="row py-1">
                     <div class="col-md-4">
-                        <img src="{{ asset('img/logo-f.5c608b98.png') }}" alt="">
+                        <a href="/">
+                            <img src="{{ asset('img/logo-f.5c608b98.png') }}" alt="">
+                        </a>
                     </div>
                     <div class="col-md-8 align-self-center align-items-center justify-content-end"
                         style="text-align: center">
@@ -117,7 +119,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-3 mb-2 align-self-center">
-                        <img src="{{ asset('img/logo-f.5c608b98.png') }}" alt="">
+                        <a href="/">
+                            <img src="{{ asset('img/logo-f.5c608b98.png') }}" alt="">
+                        </a>
 
                     </div>
                     <div class="col-md-3 mb-2">
