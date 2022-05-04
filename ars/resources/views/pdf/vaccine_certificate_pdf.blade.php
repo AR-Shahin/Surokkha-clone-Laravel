@@ -35,11 +35,20 @@
             width: 100%;
         }
 
+        .img_box {
+            position: absolute;
+            top: 26%;
+            right: 13%;
+        }
+
     </style>
 </head>
 
 <body>
     <div id="container">
+        <div class="img_box">
+            <img src="{{ public_path('img/logo-f.5c608b98.png') }}" alt="">
+        </div>
         <div class="card">
             <h2>Covid-19 Vaccine Certificate</h2>
             <table border="1">
