@@ -15,7 +15,7 @@
                     alt="User Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block">Alexander Pierce</a>
+                <a href="#" class="d-block">{{ auth('admin')->user()->name }}</a>
             </div>
         </div>
 
@@ -35,12 +35,12 @@
                             <p>Dashboard</p>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a class="nav-link" href="{{ route('admin.crud.index') }}">
                             <i class="nav-icon far fa-circle text-warning"></i>
                             <p>Crud</p>
                         </a>
-                    </li>
+                    </li> --}}
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('admin.vaccine.index') }}">
                             <i class="nav-icon far fa-circle text-warning"></i>
