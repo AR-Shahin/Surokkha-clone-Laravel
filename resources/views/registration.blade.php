@@ -20,7 +20,20 @@
                 <div class="card">
                     <div class="card-body">
                         <h2>Registraion For Vaccine</h2>
-                        <form action="{{ route('handle.registration') }}" class="mt-4" method="POST">
+                        <div>
+                            <p class="text-info">Do you have allergy or Heart Problem?</p>
+                            <p>
+                                <input type="radio" value="yes" name="diseases" id="yesRadio"> Yes
+                                <input type="radio" value="no" name="diseases" id="noRadio"> No
+                            </p>
+                        </div>
+                        <div id="notifiaction">
+                            <div class="alert alert-warning">
+                                <p class="text-danger">You are not able to registration to take vaccine!!</p>
+                            </div>
+                        </div>
+                        <form action="{{ route('handle.registration') }}" class="mt-4" method="POST"
+                            id="registraionForm">
                             @csrf
                             <div class="row">
                                 <div class="col-md-6">
@@ -148,6 +161,26 @@
 
 @push('script')
     <x-utility.captca-js />
+    <script>
+        const form = $$('#registraionForm');
+        const notifiaction = $$('#notifiaction');
+
+        form.style.display = 'none';
+        notifiaction.style.display = 'none';
+
+        $('input:radio[name=diseases]').change(function() {
+            if ($("input[name='diseases']:checked").val() == 'yes') {
+                form.style.display = 'none';
+                notifiaction.style.display = 'block';
+
+            }
+            if ($("input[name='diseases']:checked").val() == 'no') {
+                form.style.display = 'block';
+                notifiaction.style.display = 'none';
+
+            }
+        });
+    </script>
     <script>
         $(document).ready(function() {
             $('.division').select2();
