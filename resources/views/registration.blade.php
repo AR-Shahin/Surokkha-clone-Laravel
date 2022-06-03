@@ -165,10 +165,31 @@
     <script>
         const form = $$('#registraionForm');
         const notifiaction = $$('#notifiaction');
-
-
+        // const radioFileds = document.querySelectorAll('input[type=radio][name="diseases"]');
+        // const selectedField = document.querySelector('input[name="diseases"]:checked')
         form.style.display = 'none';
         notifiaction.style.display = 'none';
+
+        // if (selectedField) {
+        //     if (selectedField.value == 'no') {
+        //         form.style.display = 'block';
+        //     }
+        // }
+
+        // radioFileds.forEach(radio => radio.addEventListener('change', () => {
+
+        //     if (radio.value == 'yes') {
+        //         form.style.display = 'none';
+        //         notifiaction.style.display = 'block';
+        //     }
+
+        //     if (radio.value == 'no') {
+        //         form.style.display = 'block';
+        //         notifiaction.style.display = 'none';
+        //     }
+
+        // }));
+
 
         if ($("input[name='diseases']:checked").val() == 'no') {
             form.style.display = 'block';
