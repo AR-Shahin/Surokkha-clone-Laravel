@@ -20,11 +20,12 @@
                 <div class="card">
                     <div class="card-body">
                         <h2>Registraion For Vaccine</h2>
-                        <div>
+                        <div class="alert alert-warning">
                             <p class="text-info">Do you have allergy or Heart Problem?</p>
                             <p>
                                 <input type="radio" value="yes" name="diseases" id="yesRadio"> Yes
-                                <input type="radio" value="no" name="diseases" id="noRadio"> No
+                                <input type="radio" value="no" name="diseases" id="noRadio"
+                                    @if (session('noDiseases')) checked @endif> No
                             </p>
                         </div>
                         <div id="notifiaction">
@@ -165,8 +166,13 @@
         const form = $$('#registraionForm');
         const notifiaction = $$('#notifiaction');
 
+
         form.style.display = 'none';
         notifiaction.style.display = 'none';
+
+        if ($("input[name='diseases']:checked").val() == 'no') {
+            form.style.display = 'block';
+        }
 
         $('input:radio[name=diseases]').change(function() {
             if ($("input[name='diseases']:checked").val() == 'yes') {
