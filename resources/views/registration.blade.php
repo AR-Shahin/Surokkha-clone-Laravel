@@ -21,10 +21,18 @@
                     <div class="card-body">
                         <h2>Registraion For Vaccine</h2>
                         <div class="alert alert-warning">
-                            <p class="text-info">Do you have allergy or Heart Problem?</p>
+                            <p class="text-info">Do you have allergy Problem?</p>
                             <p>
                                 <input type="radio" value="yes" name="diseases" id="yesRadio"> Yes
                                 <input type="radio" value="no" name="diseases" id="noRadio"
+                                    @if (session('noDiseases')) checked @endif> No
+                            </p>
+                        </div>
+                        <div class="alert alert-info" id="heartProblem">
+                            <p class="text-info">Do you have Heart Problem?</p>
+                            <p>
+                                <input type="radio" value="yes" name="diseasesHeart" id="yesRadioHeart"> Yes
+                                <input type="radio" value="no" name="diseasesHeart" id="noRadioHeart"
                                     @if (session('noDiseases')) checked @endif> No
                             </p>
                         </div>
@@ -165,10 +173,12 @@
     <script>
         const form = $$('#registraionForm');
         const notifiaction = $$('#notifiaction');
+        const heartProblem = $$('#heartProblem');
         // const radioFileds = document.querySelectorAll('input[type=radio][name="diseases"]');
         // const selectedField = document.querySelector('input[name="diseases"]:checked')
         form.style.display = 'none';
         notifiaction.style.display = 'none';
+        heartProblem.style.display = 'none';
 
         // if (selectedField) {
         //     if (selectedField.value == 'no') {
@@ -199,11 +209,28 @@
             if ($("input[name='diseases']:checked").val() == 'yes') {
                 form.style.display = 'none';
                 notifiaction.style.display = 'block';
-
+                heartProblem.style.display = 'none';
+                if ($("input[name='diseasesHeart']:checked").val() == 'yes') {
+                    window.location.reload();
+                }
             }
             if ($("input[name='diseases']:checked").val() == 'no') {
-                form.style.display = 'block';
+                heartProblem.style.display = 'block';
                 notifiaction.style.display = 'none';
+
+            }
+        });
+
+        $('input:radio[name=diseasesHeart]').change(function() {
+            if ($("input[name='diseasesHeart']:checked").val() == 'yes') {
+                form.style.display = 'none';
+                notifiaction.style.display = 'block';
+                // heartProblem.style.display = 'none';
+            }
+            if ($("input[name='diseasesHeart']:checked").val() == 'no') {
+                heartProblem.style.display = 'block';
+                notifiaction.style.display = 'none';
+                form.style.display = 'block';
 
             }
         });
