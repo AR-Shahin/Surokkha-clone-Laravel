@@ -20,29 +20,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h2>Registraion For Vaccine</h2>
-                        <div class="alert alert-warning">
-                            <p class="text-info">Do you have allergy Problem?</p>
-                            <p>
-                                <input type="radio" value="yes" name="diseases" id="yesRadio"> Yes
-                                <input type="radio" value="no" name="diseases" id="noRadio"
-                                    @if (session('noDiseases')) checked @endif> No
-                            </p>
-                        </div>
-                        <div class="alert alert-info" id="heartProblem">
-                            <p class="text-info">Do you have Heart Problem?</p>
-                            <p>
-                                <input type="radio" value="yes" name="diseasesHeart" id="yesRadioHeart"> Yes
-                                <input type="radio" value="no" name="diseasesHeart" id="noRadioHeart"
-                                    @if (session('noDiseases')) checked @endif> No
-                            </p>
-                        </div>
-                        <div id="notifiaction">
-                            <div class="alert alert-warning">
-                                <p class="text-danger">You are not able to registration to take vaccine!!</p>
-                            </div>
-                        </div>
-                        <form action="{{ route('handle.registration') }}" class="mt-4" method="POST"
-                            id="registraionForm">
+                        <form action="{{ route('handle.registration') }}" class="mt-4" method="POST">
                             @csrf
                             <div class="row">
                                 <div class="col-md-6">
@@ -170,71 +148,6 @@
 
 @push('script')
     <x-utility.captca-js />
-    <script>
-        const form = $$('#registraionForm');
-        const notifiaction = $$('#notifiaction');
-        const heartProblem = $$('#heartProblem');
-        // const radioFileds = document.querySelectorAll('input[type=radio][name="diseases"]');
-        // const selectedField = document.querySelector('input[name="diseases"]:checked')
-        form.style.display = 'none';
-        notifiaction.style.display = 'none';
-        heartProblem.style.display = 'none';
-
-        // if (selectedField) {
-        //     if (selectedField.value == 'no') {
-        //         form.style.display = 'block';
-        //     }
-        // }
-
-        // radioFileds.forEach(radio => radio.addEventListener('change', () => {
-
-        //     if (radio.value == 'yes') {
-        //         form.style.display = 'none';
-        //         notifiaction.style.display = 'block';
-        //     }
-
-        //     if (radio.value == 'no') {
-        //         form.style.display = 'block';
-        //         notifiaction.style.display = 'none';
-        //     }
-
-        // }));
-
-
-        if ($("input[name='diseases']:checked").val() == 'no') {
-            form.style.display = 'block';
-        }
-
-        $('input:radio[name=diseases]').change(function() {
-            if ($("input[name='diseases']:checked").val() == 'yes') {
-                form.style.display = 'none';
-                notifiaction.style.display = 'block';
-                heartProblem.style.display = 'none';
-                if ($("input[name='diseasesHeart']:checked").val() == 'yes') {
-                    window.location.reload();
-                }
-            }
-            if ($("input[name='diseases']:checked").val() == 'no') {
-                heartProblem.style.display = 'block';
-                notifiaction.style.display = 'none';
-
-            }
-        });
-
-        $('input:radio[name=diseasesHeart]').change(function() {
-            if ($("input[name='diseasesHeart']:checked").val() == 'yes') {
-                form.style.display = 'none';
-                notifiaction.style.display = 'block';
-                // heartProblem.style.display = 'none';
-            }
-            if ($("input[name='diseasesHeart']:checked").val() == 'no') {
-                heartProblem.style.display = 'block';
-                notifiaction.style.display = 'none';
-                form.style.display = 'block';
-
-            }
-        });
-    </script>
     <script>
         $(document).ready(function() {
             $('.division').select2();

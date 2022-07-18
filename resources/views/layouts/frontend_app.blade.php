@@ -23,23 +23,42 @@
             list-style: none;
         }
 
+        a {
+            text-decoration: none;
+            color: #F26D3E
+        }
+
         section,
         footer {
             padding: 45px 0;
         }
 
         footer {
-            background: #bdc3c7;
+            background: #F26D3E;
             color: #fff
         }
 
         #hero_section {
-            background: #ecf0f1;
+            background: #FFC270;
             height: 85vh;
         }
 
         .hero_card {
-            padding: 150px 0;
+            padding: 110px 0;
+        }
+
+        .usr_icon {
+            font-size: 36px
+        }
+
+        nav a {
+            font-size: 18px;
+            font-weight: 500
+        }
+
+        .items i {
+            font-size: 22px;
+            color: #F26D3E;
         }
 
     </style>
@@ -47,79 +66,85 @@
 </head>
 
 <body>
-    <header class="navbar-light bg-light py-1">
-        <div class="container">
-            <div class="row ">
-                <div class="col-md-4">
-                    <h5 class="mt-3">Vaccine</h5>
-                    {{-- <img src="{{ asset('img/logo-f.5c608b98.png') }}" alt=""> --}}
-                </div>
-                <div class="col-md-8 align-self-center align-items-center" style="text-align: center">
-                    <nav class="navbar navbar-expand-lg">
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                            aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarNav">
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="/">হোম</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page"
-                                        href="{{ route('registration') }}">নিবন্ধন</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page"
-                                        href="{{ route('tika.card') }}">টিকা কার্ড</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page"
-                                        href="{{ route('certificate.card') }}">টিকা সনদ</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="{{ route('status') }}">টিকা
-                                        সনদ যাচাই</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    @yield('app_content')
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 mb-2 align-self-center">
-                    {{-- <img src="{{ asset('img/logo-f.5c608b98.png') }}" alt=""> --}}
-                    <h5>Vaccine</h5>
-                </div>
-                <div class="col-md-3 mb-2">
-                    <ul>
-                        <li><a href="" class="text-light">জিজ্ঞাসা</a></li>
-                        <li><a href="" class="text-light"> সহায়িকা</a></li>
-                        <li><a href="" class="text-light">প্রাইভেসি পলিসি</a></li>
-                        <li><a href="" class="text-light"> টার্মস অফ সার্ভিসেস</a></li>
-                        <li><a href="" class="text-light">অন্যান্য সহযোগী প্রতিষ্ঠানসমূহ</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3 mb-2 align-self-center">
-                    <h6>কারিগরি সহায়তায় - তথ্য ও যোগাযোগ প্রযুক্তি অধিদপ্তর </h6>
-                    <img src="{{ asset('img/foo1.png') }}" alt="">
-                </div>
-                <div class="col-md-3 mb-2 align-self-center">
-                    <h6>সহযোগী সংস্থাসমূহ - </h6>
-                    <img src="{{ asset('img/foo2.png') }}" alt="">
+    <div style="overflow: hidden">
+        <header class="navbar-light bg-light py-2">
+            <div class="container">
+                <div class="row py-1">
+                    <div class="col-md-4">
+                        <a href="/">
+                            <img src="{{ asset('img/logo-f.5c608b98.png') }}" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-8 align-self-center align-items-center justify-content-end"
+                        style="text-align: center">
+                        <nav class="navbar navbar-expand-md">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav " style="margin-left: auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="/">হোম</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page"
+                                            href="{{ route('registration') }}">নিবন্ধন</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page"
+                                            href="{{ route('tika.card') }}">টিকা কার্ড</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page"
+                                            href="{{ route('certificate.card') }}">টিকা সনদ</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page"
+                                            href="{{ route('status') }}">টিকা
+                                            সনদ যাচাই</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </header>
 
+        @yield('app_content')
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 mb-2 align-self-center">
+                        <a href="/">
+                            <img src="{{ asset('img/logo-f.5c608b98.png') }}" alt="">
+                        </a>
+
+                    </div>
+                    <div class="col-md-3 mb-2">
+                        <ul>
+                            <li><a href="" class="text-light">জিজ্ঞাসা</a></li>
+                            <li><a href="" class="text-light"> সহায়িকা</a></li>
+                            <li><a href="" class="text-light">প্রাইভেসি পলিসি</a></li>
+                            <li><a href="" class="text-light"> টার্মস অফ সার্ভিসেস</a></li>
+                            <li><a href="" class="text-light">অন্যান্য সহযোগী প্রতিষ্ঠানসমূহ</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 mb-2 align-self-center">
+                        <h6>কারিগরি সহায়তায় - তথ্য ও যোগাযোগ প্রযুক্তি অধিদপ্তর </h6>
+                        <img src="{{ asset('img/foo1.png') }}" alt="">
+                    </div>
+                    <div class="col-md-3 mb-2 align-self-center">
+                        <h6>সহযোগী সংস্থাসমূহ - </h6>
+                        <img src="{{ asset('img/foo2.png') }}" alt="">
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js">
     </script>
 

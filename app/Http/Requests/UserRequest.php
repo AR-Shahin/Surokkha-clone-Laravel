@@ -6,10 +6,6 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class UserRequest extends FormRequest
 {
-    public function __construct()
-    {
-        session()->flash('noDiseases', true);
-    }
     /**
      * Determine if the user is authorized to make this request.
      *

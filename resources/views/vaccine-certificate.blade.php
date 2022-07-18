@@ -3,7 +3,7 @@
 @section('title', 'Vaccine Certificate')
 @section('app_content')
     <section id="registraion_section">
-        <div class="row container" style="height: 55vh;">
+        <div class="row container" style="height: 60vh;">
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-body">

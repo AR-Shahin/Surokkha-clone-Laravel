@@ -36,7 +36,6 @@ class RegistrationController extends Controller
         $user = User::create($request->except(['division', 'district']));
         Mail::to($user->email)->send(new UserRegistrationMail($user));
         session()->flash('success', 'Registration Successfully Done! Check Your Email');
-        session()->flash('noDiseases', true);
         return back();
     }
 }

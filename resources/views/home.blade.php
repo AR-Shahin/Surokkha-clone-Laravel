@@ -13,15 +13,17 @@
                                     <div class="top_part">
                                         <div class="d-flex">
                                             <div class="" style="margin-right: 50px">
-                                                <i class="fa fa-users"></i>
+                                                <i class="fa fa-users usr_icon"></i>
                                             </div>
-                                            <div><strong>ভ্যাকসিনের জন্য নিবন্ধন করুন</strong></div>
+                                            <div class="align-self-center"><strong style="font-size: 34px">ভ্যাকসিনের জন্য
+                                                    নিবন্ধন
+                                                    করুন</strong></div>
                                         </div>
                                     </div>
-                                    <div class="bottom_part text-center" style="margin-top: 125px">
+                                    <div class="bottom_part text-center" style="margin-top: 50px">
                                         <h5>নিবন্ধনের সময় প্রয়োজন হবে</h5>
                                         <div class="items mt-3">
-                                            <div class="d-flex">
+                                            <div class="d-flex justify-content-between">
                                                 <div class="mx-3">
                                                     <h5><i class="fa fa-contact-card"></i></h5>
                                                     <h6>NID</h6>
@@ -50,7 +52,8 @@
                                 <div class="card-body">
                                     <div>
                                         <h4><i class="fa-solid fa-circle-info mr-5 d-inline-block"></i>
-                                            <div class="ml-3 d-inline">নিবন্ধন স্ট্যাটাস</div>
+                                            <div class="ml-5 d-inline">নিবন্ধন <span><a
+                                                        href="{{ route('status') }}">স্ট্যাটাস</a></span></div>
                                         </h4>
                                     </div>
                                 </div>
@@ -77,8 +80,9 @@
                             <div class="card mb-2">
                                 <div class="card-body">
                                     <div>
-                                        <h4> <span><i class="fa-solid fa-circle-info mr-5 d-inline-block"></i></span>সচরাচর
-                                            জিজ্ঞাসা
+                                        <h4> <span><i class="fa-solid fa-circle-info mr-5 d-inline-block"></i></span><span
+                                                class="ml-3"> সচরাচর
+                                                জিজ্ঞাসা</span>
                                         </h4>
                                     </div>
                                 </div>
@@ -96,7 +100,7 @@
                 <div class="col-md-3 mb-2">
                     <div class="card text-center">
                         <div class="card-body">
-                            <h4><i class="fa fa-phone"></i></h4>
+                            <h4>121</h4>
                             <h6>হটলাইন</h6>
                         </div>
                     </div>
@@ -104,7 +108,7 @@
                 <div class="col-md-3 mb-2">
                     <div class="card text-center">
                         <div class="card-body">
-                            <h4><i class="fa fa-phone"></i></h4>
+                            <h4>123</h4>
                             <h6>জাতীয় কল সেন্টার</h6>
                         </div>
                     </div>
@@ -112,7 +116,7 @@
                 <div class="col-md-3 mb-2">
                     <div class="card text-center">
                         <div class="card-body">
-                            <h4><i class="fa fa-phone"></i></h4>
+                            <h4>963</h4>
                             <h6>স্বাস্থ্য বাতায়ন</h6>
                         </div>
                     </div>
@@ -120,7 +124,7 @@
                 <div class="col-md-3 mb-2">
                     <div class="card text-center">
                         <div class="card-body">
-                            <h4><i class="fa fa-phone"></i></h4>
+                            <h4>9999</h4>
                             <h6>আইইডিসিআর</h6>
                         </div>
                     </div>
@@ -153,7 +157,8 @@
                                 <div class="col-md-4 text-center mb-2">
                                     <img src="{{ asset('img/img3.png') }}" alt="">
                                     <h4 class="my-3">টিকা কেন্দ্রে টিকা গ্রহণ</h4>
-                                    <p>মুঠোফোনে খুদেবার্তা প্রাপ্তি সাপেক্ষে টিকাকার্ড জাতীয় পরিচয়পত্র ও সম্মতিপত্রসহ
+                                    <p>মুঠোফোনে খুদেবার্তা প্রাপ্তি সাপেক্ষে টিকাকার্ড জাতীয় পরিচয়পত্র ও
+                                        সম্মতিপত্রসহ
                                         নির্দিষ্ট তারিখে টিকাদান কেন্দ্রে স্ব-শরীরে উপস্থিত হয়ে কোভিড-১৯ টিকা গ্রহণ
                                         করবেন।</p>
                                 </div>
