@@ -45,3 +45,10 @@ In this project, I am trying to clone the Surokkha website using Laravel. Here a
 
 ### Admin Login Page
 <p align="center"><a href="https://ibb.co/cTxGzX1"><img src="https://i.ibb.co/BswX8Kt/Screenshot-from-2023-03-11-11-45-24.png" alt="Screenshot-from-2023-03-11-11-45-24" border="0"></a>
+
+### Admin Dashboard Page
+<a href="https://ibb.co/jHLg0Yf"><img src="https://i.ibb.co/25jgVrh/Screenshot-from-2023-03-11-11-45-38.png" alt="Screenshot-from-2023-03-11-11-45-38" border="0"></a>
+
+
+### Doctor Dashboard Page
+<a href="https://ibb.co/x3LYBp1"><img src="https://i.ibb.co/kMBJwR4/Screenshot-from-2023-03-11-11-47-44.png" alt="Screenshot-from-2023-03-11-11-47-44" border="0"></a>
