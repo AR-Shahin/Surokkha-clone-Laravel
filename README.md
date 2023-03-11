@@ -34,3 +34,14 @@ In this project, I am trying to clone the Surokkha website using Laravel. Here a
 ### Vaccine Status Check Page
 <p align="center"><a href="ht
 <p align="center"><a href="https://ibb.co/XLp24xX"><img src="https://i.ibb.co/QQnbcv9/Screenshot-from-2023-03-11-11-43-11.png" alt="Screenshot-from-2023-03-11-11-43-11" border="0"></a><br />
+
+
+### Vaccine Card
+<p align="center"><a href="https://imgbb.com/"><img src="https://i.ibb.co/Kj01tMx/Screenshot-from-2023-03-11-11-54-29.png" alt="Screenshot-from-2023-03-11-11-54-29" border="0"></a>
+
+### Vaccine Certificate
+<p align="center"><a href="https://imgbb.com/"><img src="https://i.ibb.co/sgpz272/Screenshot-from-2023-03-11-11-57-03.png" alt="Screenshot-from-2023-03-11-11-57-03" border="0"></a>
+
+
+### Admin Login Page
+<p align="center"><a href="https://ibb.co/cTxGzX1"><img src="https://i.ibb.co/BswX8Kt/Screenshot-from-2023-03-11-11-45-24.png" alt="Screenshot-from-2023-03-11-11-45-24" border="0"></a>
