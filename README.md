@@ -1,64 +1,34 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Surokkha Clone using Laravel and Bootstrap
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+In this project, I am trying to clone the Surokkha website using Laravel. Here are Three modules. There are an admin module, doctor module, and user module. Users can register for taking vaccines using email and NID according to their district's hospital. After successful registration, they received a confirmation email. Then they can download the vaccine card as well as check vaccine status. Then Super admin approves their vaccine request then they got another email. Then district wise doctors pushed vaccines and stored data in the system. After then users can download their vaccine card and other stuff.
 
-## About Laravel
+## Technology
+- Laravel 
+- Bootstrap 
+- Jquery
+- AXIOS
+- MYSQL
+- Mailtrap
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### Features 
+- Vaccine Registration
+- Vaccine Status Check
+- Vaccine Certificate Download
+## Role 
+- Super Admin
+- Doctor
+## Few Snap Shorts of project
+<p align="center"><a href="https://ibb.co/LgswPrr"><img src="https://i.ibb.co/JpSLdqq/Screenshot-from-2023-03-11-11-41-20.png" alt="Screenshot-from-2023-03-11-11-41-20" border="0"></a><br /><a target='_blank' href='https://poetandpoem.com/Julia-A-Moore/Dear-Love-Do-You-Remember'>Home Page</a><br /></p>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<p align="center"><a href="https://ibb.co/NSXyXYg"><img src="https://i.ibb.co/2NwkwK0/Screenshot-from-2023-03-11-11-41-56.png" alt="Screenshot-from-2023-03-11-11-41-56" border="0"></a><br /><a target='_blank' href='https://poetandpoem.com/Julia-A-Moore/Dear-Love-Do-You-Remember'>Home Page</a><br /></p>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+<p align="center"><a href="https://ibb.co/y6MsQsG"><img src="https://i.ibb.co/D96KRKs/Screenshot-from-2023-03-11-11-42-08.png" alt="Screenshot-from-2023-03-11-11-42-08" border="0"></a><br /><a target='_blank' href='https://poetandpoem.com/Julia-A-Moore/Dear-Love-Do-You-Remember'>Home Page</a><br /></p>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+<p align="center"><a href="https://ibb.co/3WNs6zM"><img src="https://i.ibb.co/K7qG4wL/Screenshot-from-2023-03-11-11-43-02.png" alt="Screenshot-from-2023-03-11-11-43-02" border="0"></a><br /><a target='_blank' href='https://poetandpoem.com/Julia-A-Moore/Dear-Love-Do-You-Remember'>Vaccine Registration Page</a><br /></p>
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+<p align="center"><a href="https://ibb.co/pxb6CT1"><img src="https://i.ibb.co/drjsnvf/Screenshot-from-2023-03-11-11-45-03.png" alt="Screenshot-from-2023-03-11-11-45-03" border="0"></a><br /><a target='_blank' href='https://poetandpoem.com/Julia-A-Moore/Dear-Love-Do-You-Remember'>Vaccine Registarion Mail</a><br /></p>
 
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<p align="center"><a href="https://ibb.co/XLp24xX"><img src="https://i.ibb.co/QQnbcv9/Screenshot-from-2023-03-11-11-43-11.png" alt="Screenshot-from-2023-03-11-11-43-11" border="0"></a><br /><a target='_blank' href='https://poetandpoem.com/Julia-A-Moore/Dear-Love-Do-You-Remember'>Vaccine Status Check Page</a><br /></p>
