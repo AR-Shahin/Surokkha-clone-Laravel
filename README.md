@@ -25,10 +25,12 @@ In this project, I am trying to clone the Surokkha website using Laravel. Here a
 
 <p align="center"><a href="https://ibb.co/y6MsQsG"><img src="https://i.ibb.co/D96KRKs/Screenshot-from-2023-03-11-11-42-08.png" alt="Screenshot-from-2023-03-11-11-42-08" border="0"></a><br /><a target='_blank' href='https://poetandpoem.com/Julia-A-Moore/Dear-Love-Do-You-Remember'>Home Page</a><br /></p>
 
-
+### Vaccine Registration Page
 <p align="center"><a href="https://ibb.co/3WNs6zM"><img src="https://i.ibb.co/K7qG4wL/Screenshot-from-2023-03-11-11-43-02.png" alt="Screenshot-from-2023-03-11-11-43-02" border="0"></a><br /><a target='_blank' href='https://poetandpoem.com/Julia-A-Moore/Dear-Love-Do-You-Remember'>Vaccine Registration Page</a><br /></p>
 
+### Vaccine Registarion Mail
+<p align="center"><a href="https://ibb.co/pxb6CT1"><img src="https://i.ibb.co/drjsnvf/Screenshot-from-2023-03-11-11-45-03.png" alt="Screenshot-from-2023-03-11-11-45-03" border="0"></a><br />
 
-<p align="center"><a href="https://ibb.co/pxb6CT1"><img src="https://i.ibb.co/drjsnvf/Screenshot-from-2023-03-11-11-45-03.png" alt="Screenshot-from-2023-03-11-11-45-03" border="0"></a><br /><a target='_blank' href='https://poetandpoem.com/Julia-A-Moore/Dear-Love-Do-You-Remember'>Vaccine Registarion Mail</a><br /></p>
-
-<p align="center"><a href="https://ibb.co/XLp24xX"><img src="https://i.ibb.co/QQnbcv9/Screenshot-from-2023-03-11-11-43-11.png" alt="Screenshot-from-2023-03-11-11-43-11" border="0"></a><br /><a target='_blank' href='https://poetandpoem.com/Julia-A-Moore/Dear-Love-Do-You-Remember'>Vaccine Status Check Page</a><br /></p>
+### Vaccine Status Check Page
+<p align="center"><a href="ht
+<p align="center"><a href="https://ibb.co/XLp24xX"><img src="https://i.ibb.co/QQnbcv9/Screenshot-from-2023-03-11-11-43-11.png" alt="Screenshot-from-2023-03-11-11-43-11" border="0"></a><br />
