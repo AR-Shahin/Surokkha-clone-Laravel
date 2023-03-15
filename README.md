@@ -1,4 +1,5 @@
-# Surokkha Clone using Laravel and BootstrapIn this project, I am trying to clone the Surokkha website using Laravel. Here are Three modules. There are an admin module, a doctor module, and a user module. Users can register to take vaccines using email and NID according to their district's hospital. After successful registration, they received a confirmation email. Then they can download the vaccine card and check the vaccine status. The Super admin approved their vaccine request then they got another email. The district-wise doctors pushed vaccines and stored data in the system. After then, users can download their vaccine card and other stuff.
+# Surokkha Clone using Laravel and Bootstrap
+In this project, I am trying to clone the Surokkha website using Laravel. Here are Three modules. There are an admin module, a doctor module, and a user module. Users can register to take vaccines using email and NID according to their district's hospital. After successful registration, they received a confirmation email. Then they can download the vaccine card and check the vaccine status. The Super admin approved their vaccine request then they got another email. The district-wise doctors pushed vaccines and stored data in the system. After then, users can download their vaccine card and other stuff.
 
 ## Technology
 - Laravel 
